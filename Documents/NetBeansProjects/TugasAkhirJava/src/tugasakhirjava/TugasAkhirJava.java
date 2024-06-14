@@ -4,17 +4,54 @@
  */
 package tugasakhirjava;
 
-/**
- *
- * @author Lenovo V14
- */
+import java.util.Scanner;
+
 public class TugasAkhirJava {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+      public static void main(String[] args){
+    Scanner inputan=new Scanner(System.in);
+        int A[][]=new int[2][2];
+        int B[][]=new int[2][2];
+        int C[][]=new int[2][2];
+        
+        System.out.println("Masukan Nilai Matriks X");
+        System.out.println("=======================");
+        for(int i=0;i<2;i++)
+        {
+            for(int j=0;j<2;j++)
+            {
+                System.out.print("[" +(i+1)+"]["+(j+1)+"]:");
+                A[i][j]=inputan.nextInt();
+            }
+        }
+        System.out.println("Masukan Nilai Matriks Y");
+        System.out.println("=======================");
+        for(int i=0;i<2;i++)
+        {
+            for(int j=0;j<2;j++)
+            {
+                System.out.print("[" +(i+1)+"]["+(j+1)+"]:");
+                B[i][j]=inputan.nextInt();
+            }
+        }
+        for(int i=0;i<2;i++)
+        {
+            for(int j=0;j<2;j++)
+            {
+                C[i][j]=A[i][j]+B[i][j];
+            }
+        }
+        System.out.println("\nHasil Penjumlahan Matriks");
+        System.out.println("=======================");
+        for(int i=0;i<2;i++)
+        {
+            for(int j=0;j<2;j++)
+            {
+                System.out.print(+(C[i][j])+" ");
+            }
+            System.out.println(" ");
+        }
     }
+    
     
 }
